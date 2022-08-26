@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('phone', 20);
             $table->float('average_rating', 2, 1);
             $table->float('average_cost', 8, 2);
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
